@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F4F4F4;
+    color: #222;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    background-color: #1B1B3A;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* MAIN */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+}
+
+section {
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #1B1B3A;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    margin-top: 1rem;
+    color: #4CAF50;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+/* SITE MAP */
+.site-map {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.map-item {
+    background-color: #1B1B3A;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+
+/* WIREFRAMES */
+.wireframe {
+    border: 2px solid #ccc;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.wf-header,
+.wf-hero,
+.wf-box,
+.wf-card,
+.wf-footer {
+    background-color: #ddd;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.wf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.wf-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1B1B3A;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .wf-grid,
+    .wf-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .site-map {
+        flex-direction: column;
+        align-items: center;
+    }
+}
