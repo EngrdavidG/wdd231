@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Dangote Group",
+    "address": "Lagos, Nigeria",
+    "membership": "Gold"
+  },
+  {
+    "name": "GTBank",
+    "address": "Victoria Island, Lagos",
+    "membership": "Silver"
+  },
+  {
+    "name": "Flutterwave",
+    "address": "Lekki, Lagos",
+    "membership": "Bronze"
+  }
+]
