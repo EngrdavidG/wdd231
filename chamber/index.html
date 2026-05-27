@@ -1,111 +1,70 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lagos Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/chamber.css">
 
-  <title>Lagos Chamber Directory | Site Plan</title>
-
-  <meta name="description"
-    content="Site plan for the Lagos Chamber Directory website project including typography, wireframe, color palette, and design strategy.">
-
-  <meta name="author" content="David Onochie Izuogu">
-
-  <link rel="icon" href="images/favicon.ico">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Lagos Chamber Directory Site Plan">
-  <meta property="og:description"
-    content="Site plan for the Lagos Chamber Directory website project including typography, color palette, wireframe, and design strategy.">
-  <meta property="og:image" content="https://engrdavidg.github.io/wdd231/chamber/images/logo.svg">
-  <meta property="og:url"
-    content="https://engrdavidg.github.io/wdd231/chamber/directory.html">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-    rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/chamber-site-plan.css">
-  <link rel="stylesheet" href="styles/chamber-site-plan-large.css">
-
-  <script src="scripts/directory.js" defer></script>
-
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
 </head>
-
 <body>
 
-  <header>
+<header>
+    <div class="header-left">
+        <img src="images/logo.svg" alt="Logo" class="logo">
+        <h1>Lagos Chamber of Commerce</h1>
+    </div>
     <nav>
-      <ul>
-        <li><a href="directory.html">Home</a></li>
-        <li><a href="#site-purpose">Purpose</a></li>
-        <li><a href="#scenarios">Scenarios</a></li>
-        <li><a href="#colors">Colors</a></li>
-      </ul>
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="#">Join</a>
+        <a href="#">Discover</a>
     </nav>
-  </header>
+</header>
 
-  <main>
-
-    <h1>Lagos Chamber Directory Site Plan</h1>
-
-    <section id="site-purpose">
-      <h2>Site Purpose</h2>
-      <p>
-        The Lagos Chamber Directory website serves as a business resource hub
-        where local companies can be listed and discovered by visitors,
-        entrepreneurs, investors, and members of the community.
-      </p>
+<main>
+    <section class="hero">
+        <img src="images/herolcci.webp" alt="Lagos City" class="hero-image">
+        <a href="#" class="cta">Join the Chamber</a>
     </section>
 
-    <section id="scenarios">
-      <h2>Scenarios</h2>
-      <ul>
-        <li>Where can I find businesses registered with the Lagos Chamber?</li>
-        <li>Which companies are premium chamber members?</li>
-        <li>How do I contact a business listed in the directory?</li>
-      </ul>
+    <section class="events-section">
+        <h2>Current Events</h2>
+        <p>Business networking summit happening this month with local entrepreneurs and investors.</p>
     </section>
 
-    <section id="colors">
-      <h2>Color Schema</h2>
-      <p><strong>Primary:</strong> #004080</p>
-      <p><strong>Secondary:</strong> #f4f4f4</p>
-      <p><strong>Accent:</strong> #ffb703</p>
+    <section class="activities-section">
+        <h2>Activities</h2>
+        <p>Weekly workshops, trade fairs, startup mentorship programs and member networking sessions.</p>
     </section>
 
-    <section>
-      <h2>Typography</h2>
-      <p>Poppins will be used for headings and body text.</p>
+    <section class="weather-section">
+        <h2>Weather</h2>
+        <p id="current-temp"></p>
+        <p id="weather-desc"></p>
+        <div id="forecast"></div>
     </section>
 
-    <section>
-      <h2>Wireframe</h2>
-      <div class="site-map">
-        <div>
-          <h3>Mobile View</h3>
-          <p>Header → Navigation → Main Content → Footer</p>
-        </div>
-
-        <div>
-          <h3>Desktop View</h3>
-          <p>Header → Navigation → Grid Layout → Footer</p>
-        </div>
-      </div>
+    <section class="spotlight-section">
+        <h2>Member Spotlights</h2>
+        <div id="spotlights"></div>
     </section>
+</main>
 
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Lagos Chamber Directory | David Onochie Izuogu</p>
-  </footer>
+<footer>
+    <p>Lagos Chamber of Commerce</p>
+    <p>&copy; <span id="currentyear"></span> Izuogu David Onochie | Lagos, Nigeria</p>
+    <p id="lastModified"></p>
+    <div class="social-links">
+        <a href="https://facebook.com" target="_blank"><img src="images/facebook-square.svg" alt="Facebook"></a>
+        <a href="https://twitter.com" target="_blank"><img src="images/twitter.svg" alt="Twitter"></a>
+        <a href="https://instagram.com" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
+        <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+    </div>
+</footer>
 
 </body>
-
 </html>

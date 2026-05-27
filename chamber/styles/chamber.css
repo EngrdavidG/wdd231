@@ -1,0 +1,278 @@
+/* ==========================================================================
+   1. GLOBAL SYSTEM RESETS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f5;
+    color: #333333;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION STYLES
+   ========================================================================== */
+header {
+    background: #0b5d33;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2rem;
+}
+
+nav a {
+    display: block;
+    padding: 0.8rem;
+    text-decoration: none;
+    color: white;
+    background: #124d2d;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+    background: #167c46;
+}
+
+/* ==========================================================================
+   3. MOBILE MAIN STRUCTURE (Single Column)
+   ========================================================================== */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+section h2 {
+    color: #0b5d33;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f4b400;
+    padding-bottom: 0.3rem;
+    font-size: 1.35rem;
+}
+
+/* Hero & CTA Block Styling */
+.hero {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.cta-overlay {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+}
+
+.cta {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #f4b400;
+    color: #111;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.cta:hover {
+    transform: scale(1.04);
+}
+
+/* Weather UI Specifics */
+.weather-main {
+    margin-bottom: 1rem;
+}
+
+#current-temp {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+}
+
+#forecast {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.forecast-day {
+    display: flex;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   4. SPOTLIGHTS CORE LAYOUT 
+   ========================================================================== */
+#spotlights {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.spotlight-logo {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 0.8rem;
+}
+
+.spotlight-card h3 {
+    color: #0b5d33;
+    margin-bottom: 0.4rem;
+}
+
+.spotlight-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.2rem;
+}
+
+.spotlight-card a {
+    color: #167c46;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   5. FOOTER SYSTEM
+   ========================================================================== */
+/* FOOTER SYSTEM */
+footer {
+    background: #0b5d33;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+/* Flexbox containers for mobile view */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.social-links img {
+    width: 32px;  /* Clean, crisp size on high-density phone screens */
+    height: auto;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Elegant touch: Dim icons slightly until hovered */
+.social-links a img {
+    filter: opacity(0.85);
+}
+
+.social-links a:hover img {
+    transform: scale(1.15); /* Snappy feedback when hovered */
+    filter: opacity(1);
+
+}
+
+/* ==========================================================================
+   6. DESKTOP RESPONSIVE BREAKPOINT (725px and up)
+   ========================================================================== */
+@media only screen and (min-width: 725px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 1rem 2.5rem;
+    }
+
+    .header-left {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    nav {
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    nav a {
+        border-bottom: none;
+        border-radius: 4px;
+        margin-left: 0.6rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    /* 3-Column Visual Dashboard Matrix Map */
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "hero hero hero"
+            "events activities weather"
+            "spotlight spotlight spotlight";
+        gap: 1.5rem;
+    }
+
+    .hero { grid-area: hero; }
+    .events-section { grid-area: events; }
+    .activities-section { grid-area: activities; }
+    .weather-section { grid-area: weather; }
+    .spotlight-section { grid-area: spotlight; }
+
+    /* Snap spotlights horizontally exactly like your mockup screenshot */
+    #spotlights {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

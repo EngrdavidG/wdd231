@@ -1,17 +1,28 @@
-[
-  {
-    "name": "Dangote Group",
-    "address": "Lagos, Nigeria",
-    "membership": "Gold"
-  },
-  {
-    "name": "GTBank",
-    "address": "Victoria Island, Lagos",
-    "membership": "Silver"
-  },
-  {
-    "name": "Flutterwave",
-    "address": "Lekki, Lagos",
-    "membership": "Bronze"
-  }
-]
+{
+  "members": [
+    {
+      "name": "Dexin Technologies",
+      "phone": "+234 800 000 0000",
+      "address": "Abuja, Nigeria",
+      "membershipLevel": "Gold",
+      "imagePath": "images/logo.svg",
+      "website": "https://example.com"
+    },
+    {
+      "name": "Prime Foods Ltd",
+      "phone": "+234 812 345 6789",
+      "address": "Wuse 2, Abuja",
+      "membershipLevel": "Silver",
+      "imagePath": "images/logo.svg",
+      "website": "https://example.com"
+    },
+    {
+      "name": "Nova Digital Hub",
+      "phone": "+234 701 222 3344",
+      "address": "Garki, Abuja",
+      "membershipLevel": "Gold",
+      "imagePath": "images/logo.svg",
+      "website": "https://example.com"
+    }
+  ]
+}
