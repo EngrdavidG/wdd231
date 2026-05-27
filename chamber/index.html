@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lagos Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/chamber.css">
+    <title>Lagos Chamber of Commerce - Home Dashboard</title>
+    
+    <meta name="description" content="Welcome to the Lagos Chamber of Commerce home page. Discover corporate events, real-time local weather updates, and premium local business spotlights.">
+    <meta name="author" content="Izuogu David Onochie">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <meta property="og:title" content="Lagos Chamber of Commerce - Corporate Portal">
+    <meta property="og:description" content="Empowering and connecting businesses across Lagos through strategic networking, updates, and trade mentorship.">
+    <meta property="og:image" content="https://izuogudavid.github.io/chamber/images/herolcci.webp">
+    <meta property="og:url" content="https://izuogudavid.github.io/chamber/index.html">
+    <meta property="og:type" content="website">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    
     <script src="scripts/date.js" defer></script>
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlight.js" defer></script>
@@ -14,11 +31,11 @@
 
 <header>
     <div class="header-left">
-        <img src="images/logo.svg" alt="Logo" class="logo">
-        <h1>Lagos Chamber of Commerce</h1>
+        <img src="images/logo.svg" alt="Lagos Chamber of Commerce Logo" class="logo">
+        <div class="header-title">Lagos Chamber of Commerce</div>
     </div>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="directory.html">Directory</a>
         <a href="#">Join</a>
         <a href="#">Discover</a>
@@ -26,43 +43,68 @@
 </header>
 
 <main>
+    <h1>Lagos Chamber of Commerce Hub</h1>
+
     <section class="hero">
-        <img src="images/herolcci.webp" alt="Lagos City" class="hero-image">
-        <a href="#" class="cta">Join the Chamber</a>
+        <img src="images/herolcci.webp" alt="Lagos City Skyline Aerial View" class="hero-image">
+        <div class="cta-overlay">
+            <a href="join.html" class="cta">Join the Chamber</a>
+        </div>
     </section>
 
     <section class="events-section">
         <h2>Current Events</h2>
-        <p>Business networking summit happening this month with local entrepreneurs and investors.</p>
+        <div class="event-card">
+            <h3>Eko Business Summit 2026</h3>
+            <p class="date">📅 June 15, 2026</p>
+            <p>Connect with local tech innovators, ecosystem builders, and venture capitalists in Lagos.</p>
+        </div>
     </section>
 
     <section class="activities-section">
-        <h2>Activities</h2>
+        <h2>Chamber Activities</h2>
         <p>Weekly workshops, trade fairs, startup mentorship programs and member networking sessions.</p>
     </section>
 
     <section class="weather-section">
         <h2>Weather</h2>
-        <p id="current-temp"></p>
-        <p id="weather-desc"></p>
-        <div id="forecast"></div>
+        <div class="weather-info">
+            <div class="weather-main">
+                <p id="current-temp">--°C</p>
+                <p id="weather-desc">Loading weather...</p>
+            </div>
+            <hr>
+            <h3>3-Day Forecast</h3>
+            <div id="forecast">
+                </div>
+        </div>
     </section>
 
     <section class="spotlight-section">
         <h2>Member Spotlights</h2>
-        <div id="spotlights"></div>
+        <div id="spotlights">
+            </div>
     </section>
 </main>
 
 <footer>
-    <p>Lagos Chamber of Commerce</p>
-    <p>&copy; <span id="currentyear"></span> Izuogu David Onochie | Lagos, Nigeria</p>
-    <p id="lastModified"></p>
+    <p><strong>Lagos Chamber of Commerce</strong></p>
+    <p>&copy; <span id="currentyear">2026</span> | Izuogu David Onochie | Lagos, Nigeria</p>
+    <p id="lastModified">Last Modified: </p>
+    
     <div class="social-links">
-        <a href="https://facebook.com" target="_blank"><img src="images/facebook-square.svg" alt="Facebook"></a>
-        <a href="https://twitter.com" target="_blank"><img src="images/twitter.svg" alt="Twitter"></a>
-        <a href="https://instagram.com" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
-        <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/facebook-square.svg" alt="Facebook Page">
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/twitter.svg" alt="Twitter Profile">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/instagram.svg" alt="Instagram Profile">
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <img src="images/linkedin.svg" alt="LinkedIn Corporate Directory">
+        </a>
     </div>
 </footer>
 
