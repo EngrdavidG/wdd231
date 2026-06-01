@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Received - Lagos Chamber of Commerce</title>
+    
+    <meta name="description" content="Thank you for submitting your membership application to the Lagos Chamber of Commerce. Your profile details have been securely processed.">
+    <meta name="author" content="Izuogu David Onochie">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Application Received - Lagos Chamber of Commerce">
+    <meta property="og:description" content="Thank you for submitting your membership application to the Lagos Chamber of Commerce. Your profile details have been securely processed.">
+    <meta property="og:image" content="https://engrdavidg.github.io/wdd231/chamber/images/herolcci.webp">
+    <meta property="og:url" content="https://engrdavidg.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="images/logo.svg" alt="Lagos Chamber of Commerce Logo" class="logo">
+        <div class="header-title">Lagos Chamber of Commerce</div>
+    </div>
+</header>
+
+<main style="max-width: 800px; margin: 2rem auto; padding: 1.5rem;">
+    <section style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center;">
+        <h1 style="color: #0b5d33; margin-bottom: 1rem;">🎉 Application Submitted!</h1>
+        <p>Thank you for filling out your submission form. Your corporate data parameters have been captured by our ecosystem review panel pipeline loops.</p>
+        
+        <hr style="margin: 2rem 0; border: 0; border-top: 1px dashed #cbd5e1;">
+        
+        <h2 style="text-align: left; font-size: 1.3rem; margin-bottom: 1rem; color: #1e293b;">Captured Parameters Record</h2>
+        <div id="parameter-summary" style="text-align: left; background: #f8fafc; padding: 1.5rem; border-radius: 6px; font-family: sans-serif; line-height: 1.8;">
+            <p>Loading application data parameter arrays...</p>
+        </div>
+
+        <a href="index.html" class="cta" style="display: inline-block; margin-top: 2rem; text-align: center;">Return to Portal Home</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <span id="currentyear">2026</span> | Izuogu David Onochie | Lagos, Nigeria</p>
+    <p id="lastModified"></p>
+</footer>
+
+<script>
+    // URL Query Parameter Processing Logic
+    document.addEventListener("DOMContentLoaded", () => {
+        const dataContainer = document.getElementById("parameter-summary");
+        const queryParams = new URLSearchParams(window.location.search);
+
+        if (queryParams.has("firstName")) {
+            // Reconstruct and format hidden date block ISO values neatly
+            let rawTime = queryParams.get("formTimestamp");
+            let structuredTime = rawTime ? new Date(rawTime).toLocaleString() : "N/A";
+
+            dataContainer.innerHTML = `
+                <p><strong>Applicant Name:</strong> ${queryParams.get("firstName")} ${queryParams.get("lastName")}</p>
+                <p><strong>Contact Email:</strong> <a href="mailto:${queryParams.get("email")}">${queryParams.get("email")}</a></p>
+                <p><strong>Mobile Line:</strong> ${queryParams.get("phone")}</p>
+                <p><strong>Corporate Entity:</strong> ${queryParams.get("orgName")}</p>
+                <p><strong>Selected Tier Value:</strong> <span style="text-transform: uppercase; font-weight: bold; color: #0b5d33;">${queryParams.get("membershipLevel")}</span></p>
+                <p><strong>System Load Epoch Timestamp:</strong> <code style="background: #e2e8f0; padding: 0.2rem 0.4rem; border-radius: 4px;">${structuredTime}</code></p>
+            `;
+        } else {
+            dataContainer.innerHTML = `<p style="color: #cc0000;">⚠️ No valid application query string traces located in active window variables.</p>`;
+        }
+    });
+</script>
+</body>
+</html>
