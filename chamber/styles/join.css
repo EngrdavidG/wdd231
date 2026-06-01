@@ -181,3 +181,60 @@ form input:focus:invalid {
         align-items: start;
     }
 }
+
+/* ==========================================================================
+   THANK YOU PAGE CLEAN EXTERNAL STYLING
+   ========================================================================== */
+.thankyou-main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+.thankyou-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.thankyou-card h1 {
+    color: #0b5d33;
+    margin-bottom: 1rem;
+}
+
+.thankyou-card h2 {
+    text-align: left;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #1e293b;
+    border: none;
+}
+
+.divider {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px dashed #cbd5e1;
+}
+
+#parameter-summary {
+    text-align: left;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 6px;
+    font-family: sans-serif;
+    line-height: 1.8;
+}
+
+.tier-highlight {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #0b5d33;
+}
+
+#parameter-summary code {
+    background: #e2e8f0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+}

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Received - Lagos Chamber of Commerce</title>
+    
+    <title>Join the Lagos Chamber of Commerce - Application Received</title>
     
     <meta name="description" content="Thank you for submitting your membership application to the Lagos Chamber of Commerce. Your profile details have been securely processed.">
     <meta name="author" content="Izuogu David Onochie">
@@ -15,10 +16,16 @@
     <meta property="og:url" content="https://engrdavidg.github.io/wdd231/chamber/thankyou.html">
     <meta property="og:type" content="website">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/chamber.css">
     <link rel="stylesheet" href="styles/join.css">
+    
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
 
@@ -27,52 +34,35 @@
         <img src="images/logo.svg" alt="Lagos Chamber of Commerce Logo" class="logo">
         <div class="header-title">Lagos Chamber of Commerce</div>
     </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+        <a href="#">Discover</a>
+    </nav>
 </header>
 
-<main style="max-width: 800px; margin: 2rem auto; padding: 1.5rem;">
-    <section style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center;">
-        <h1 style="color: #0b5d33; margin-bottom: 1rem;">🎉 Application Submitted!</h1>
+<main class="thankyou-main">
+    <section class="thankyou-card">
+        <h1>🎉 Application Submitted!</h1>
         <p>Thank you for filling out your submission form. Your corporate data parameters have been captured by our ecosystem review panel pipeline loops.</p>
         
-        <hr style="margin: 2rem 0; border: 0; border-top: 1px dashed #cbd5e1;">
+        <hr class="divider">
         
-        <h2 style="text-align: left; font-size: 1.3rem; margin-bottom: 1rem; color: #1e293b;">Captured Parameters Record</h2>
-        <div id="parameter-summary" style="text-align: left; background: #f8fafc; padding: 1.5rem; border-radius: 6px; font-family: sans-serif; line-height: 1.8;">
+        <h2>Captured Parameters Record</h2>
+        <div id="parameter-summary">
             <p>Loading application data parameter arrays...</p>
         </div>
 
-        <a href="index.html" class="cta" style="display: inline-block; margin-top: 2rem; text-align: center;">Return to Portal Home</a>
+        <a href="index.html" class="cta">Return to Portal Home</a>
     </section>
 </main>
 
 <footer>
+    <p><strong>Lagos Chamber of Commerce</strong></p>
     <p>&copy; <span id="currentyear">2026</span> | Izuogu David Onochie | Lagos, Nigeria</p>
     <p id="lastModified"></p>
 </footer>
 
-<script>
-    // URL Query Parameter Processing Logic
-    document.addEventListener("DOMContentLoaded", () => {
-        const dataContainer = document.getElementById("parameter-summary");
-        const queryParams = new URLSearchParams(window.location.search);
-
-        if (queryParams.has("firstName")) {
-            // Reconstruct and format hidden date block ISO values neatly
-            let rawTime = queryParams.get("formTimestamp");
-            let structuredTime = rawTime ? new Date(rawTime).toLocaleString() : "N/A";
-
-            dataContainer.innerHTML = `
-                <p><strong>Applicant Name:</strong> ${queryParams.get("firstName")} ${queryParams.get("lastName")}</p>
-                <p><strong>Contact Email:</strong> <a href="mailto:${queryParams.get("email")}">${queryParams.get("email")}</a></p>
-                <p><strong>Mobile Line:</strong> ${queryParams.get("phone")}</p>
-                <p><strong>Corporate Entity:</strong> ${queryParams.get("orgName")}</p>
-                <p><strong>Selected Tier Value:</strong> <span style="text-transform: uppercase; font-weight: bold; color: #0b5d33;">${queryParams.get("membershipLevel")}</span></p>
-                <p><strong>System Load Epoch Timestamp:</strong> <code style="background: #e2e8f0; padding: 0.2rem 0.4rem; border-radius: 4px;">${structuredTime}</code></p>
-            `;
-        } else {
-            dataContainer.innerHTML = `<p style="color: #cc0000;">⚠️ No valid application query string traces located in active window variables.</p>`;
-        }
-    });
-</script>
 </body>
 </html>
