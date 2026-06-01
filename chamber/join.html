@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Membership Application - Lagos Chamber of Commerce</title>
+    <meta name="description" content="Apply for corporate membership with the Lagos Chamber of Commerce. Select a tier, explore organizational benefits, and submit your application form.">
+    <meta name="author" content="Izuogu David Onochie">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts System Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets System Links -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/join.css">
+    
+    <!-- Script Modules (Deferred) -->
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="images/logo.svg" alt="Lagos Chamber of Commerce Logo" class="logo">
+        <div class="header-title">Lagos Chamber of Commerce</div>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html" class="active">Join</a>
+        <a href="#">Discover</a>
+    </nav>
+</header>
+
+<main class="join-main-layout">
+    <h1>Membership Application Portal</h1>
+
+    <!-- Left Column Area: Fully Compliant Form Wrapper -->
+    <section class="form-container">
+        <h2>Application Form</h2>
+        <form method="get" action="thankyou.html" id="membership-form">
+            
+            <label>First Name *
+                <input type="text" name="firstName" autocomplete="given-name" title="Enter your legal first name" required>
+            </label>
+
+            <label>Last Name *
+                <input type="text" name="lastName" autocomplete="family-name" title="Enter your legal last name" required>
+            </label>
+
+            <label>Organizational Title
+                <input type="text" name="orgTitle" autocomplete="organization-title" 
+                       title="Minimum 7 characters. Letters, hyphens, and spaces only."
+                       pattern="[A-Za-z\s\-]{7,}">
+            </label>
+
+            <label>Email Address *
+                <input type="email" name="email" autocomplete="email" placeholder="example@domain.com" title="Provide a valid contact email address" required>
+            </label>
+
+            <label>Mobile Phone Number *
+                <input type="tel" name="phone" autocomplete="tel" title="Provide a direct mobile line contact number" required>
+            </label>
+
+            <label>Business/Organization Name *
+                <input type="text" name="orgName" autocomplete="organization" title="Provide the legal trading name of your entity" required>
+            </label>
+
+            <label>Membership Level Selection *
+                <select name="membershipLevel" required title="Select an organizational tier level alignment">
+                    <option value="" disabled selected>-- Choose your Tier --</option>
+                    <option value="np">NP Membership (Non-Profit - Fee Waived)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+
+            <label>Business/Organization Description
+                <textarea name="description" rows="4" title="Brief overview describing organizational operations"></textarea>
+            </label>
+
+            <!-- Embedded Hidden Real-Time Epoch State Timestamp -->
+            <input type="hidden" name="formTimestamp" id="form-timestamp">
+
+            <input type="submit" value="Submit Application" class="form-submit-btn">
+        </form>
+    </section>
+
+    <!-- Right Column Area: Animated Informational Cards Panel -->
+    <section class="cards-container">
+        <h2>Membership Level Tiers</h2>
+        <div class="membership-cards-grid">
+            
+            <div class="tier-card np-card animate-fade-in">
+                <h3>NP Level</h3>
+                <p>Designed strictly for NGOs, charities, and educational organizations.</p>
+                <button type="button" class="modal-open-btn" data-target="modal-np">Explore Benefits &rarr;</button>
+            </div>
+
+            <div class="tier-card bronze-card animate-fade-in">
+                <h3>Bronze Level</h3>
+                <p>Perfect for early startups looking for community roots.</p>
+                <button type="button" class="modal-open-btn" data-target="modal-bronze">Explore Benefits &rarr;</button>
+            </div>
+
+            <div class="tier-card silver-card animate-fade-in">
+                <h3>Silver Level</h3>
+                <p>Tailored for mid-tier growing operations seeking networking power.</p>
+                <button type="button" class="modal-open-btn" data-target="modal-silver">Explore Benefits &rarr;</button>
+            </div>
+
+            <div class="tier-card gold-card animate-fade-in">
+                <h3>Gold Level</h3>
+                <p>Our premium corporate framework tracking matrix tier.</p>
+                <button type="button" class="modal-open-btn" data-target="modal-gold">Explore Benefits &rarr;</button>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- Semantic Dialog Modal Infrastructure Sheets -->
+<dialog id="modal-np" class="benefit-modal">
+    <div class="modal-content">
+        <h2>NP Membership Benefits</h2>
+        <p><strong>Cost:</strong> Free ($0 / Year)</p>
+        <ul>
+            <li>Full profile placement directory tracking lists.</li>
+            <li>Access to open chamber civic infrastructure roundtables.</li>
+        </ul>
+        <button type="button" class="modal-close-btn">Close Panel</button>
+    </div>
+</dialog>
+
+<dialog id="modal-bronze" class="benefit-modal">
+    <div class="modal-content">
+        <h2>Bronze Membership Benefits</h2>
+        <p><strong>Cost:</strong> $150 / Year</p>
+        <ul>
+            <li>Standard inclusion listed within structural directories.</li>
+            <li>Discount passes to monthly business networking summits.</li>
+        </ul>
+        <button type="button" class="modal-close-btn">Close Panel</button>
+    </div>
+</dialog>
+
+<dialog id="modal-silver" class="benefit-modal">
+    <div class="modal-content">
+        <h2>Silver Membership Benefits</h2>
+        <p><strong>Cost:</strong> $400 / Year</p>
+        <ul>
+            <li>All previous metrics included.</li>
+            <li>25% discount margins across seasonal training seminars.</li>
+            <li>Quarterly feature spaces within email broadcast streams.</li>
+        </ul>
+        <button type="button" class="modal-close-btn">Close Panel</button>
+    </div>
+</dialog>
+
+<dialog id="modal-gold" class="benefit-modal">
+    <div class="modal-content">
+        <h2>Gold Membership Benefits</h2>
+        <p><strong>Cost:</strong> $1,000 / Year</p>
+        <ul>
+            <li>All previous metrics included.</li>
+            <li><strong>Premium Home Page Spotlights Layout Rotation inclusion.</strong></li>
+            <li>Free admission tickets for up to five team leads across all summits.</li>
+            <li>Direct advisory pipeline targeting regional digital transformation boards.</li>
+        </ul>
+        <button type="button" class="modal-close-btn">Close Panel</button>
+    </div>
+</dialog>
+
+<footer>
+    <p><strong>Lagos Chamber of Commerce</strong></p>
+    <p>&copy; <span id="currentyear">2026</span> | Izuogu David Onochie | Lagos, Nigeria</p>
+    <p id="lastModified">Last Modified: </p>
+</footer>
+
+</body>
+</html>
