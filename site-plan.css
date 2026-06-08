@@ -1,0 +1,94 @@
+/* --- COLOR PALETTE & TYPOGRAPHY VARIABLES --- */
+:root {
+    --primary-blue: #1e40af;       /* Trustworthy, administrative dominant color */
+    --soft-blue: #eff6ff;          /* Light, welcoming background tint */
+    --warm-accent: #f59e0b;        /* Humanized, cheerful amber for highlights */
+    --text-dark: #1f2937;          /* High contrast charcoal for readability */
+    --text-light: #4b5563;         /* Muted gray for secondary prose */
+    --white: #ffffff;
+    --border-color: #e5e7eb;
+}
+
+/* --- BASE STYLES --- */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--soft-blue);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* --- TYPOGRAPHY APPLICATION --- */
+h1, h2, h3 {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--primary-blue);
+}
+
+h1 {
+    border-bottom: 3px solid var(--warm-accent);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h2 {
+    margin-top: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+p, li {
+    color: var(--text-light);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* --- VISUAL AIDS FOR THE PLAN --- */
+.color-box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+.primary-blue-box { background-color: #1e40af; }
+.soft-blue-box { background-color: #eff6ff; }
+.warm-accent-box { background-color: #f59e0b; }
+
+.heading-font-preview {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+}
+
+.body-font-preview {
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- WIREFRAME LAYOUT STYLES --- */
+pre {
+    background-color: #f3f4f6;
+    border-left: 4px solid var(--primary-blue);
+    padding: 15px;
+    font-family: monospace;
+    font-size: 14px;
+    overflow-x: auto;
+    color: #111827;
+}
