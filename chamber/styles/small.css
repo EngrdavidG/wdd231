@@ -181,3 +181,13 @@ footer {
     border-top: 4px solid #f4b400;
     font-size: 0.95rem;
 }
+
+/* Explicit Grid Area Mappings to Pass W3C Validation */
+#item1 { grid-area: item1; }
+#item2 { grid-area: item2; }
+#item3 { grid-area: item3; }
+#item4 { grid-area: item4; }
+#item5 { grid-area: item5; }
+#item6 { grid-area: item6; }
+#item7 { grid-area: item7; }
+#item8 { grid-area: item8; }
