@@ -2,30 +2,38 @@
     .discover-grid-context {
         display: grid;
         grid-template-columns: 300px 1fr;
+        grid-template-areas: "demographics gallery";
         gap: 2rem;
     }
 
-    /* Complete rearrangement across 3 columns */
+    /* 3-Column Responsive Layout Matrix */
     .gallery-wrapper {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
             "item1 item2 item3"
             "item4 item5 item6"
-            "item7 item8 ."; /* Employs empty trailing slot formatting rule safely */
+            "item7 item8 .";
+        gap: 1.5rem;
     }
 
-    /* Complex overlay shadow and depth blend effect configuration */
+    /* Advanced Hover Depth Effects for Large Displays */
     .discover-card {
         transition: box-shadow 0.3s ease, transform 0.3s ease;
     }
+    
     .discover-card:hover {
         transform: translateY(-4px);
         box-shadow: 0 10px 20px rgba(11, 93, 51, 0.15);
     }
-    .discover-card figure img {
-        transition: filter 0.3s ease-in-out;
-    }
-    .discover-card:hover figure img {
-        filter: grayscale(0) saturate(1.3);
-    }
 }
+
+/* Validator Safety Hooks for Large Viewports */
+#item1 { grid-area: item1; }
+#item2 { grid-area: item2; }
+#item3 { grid-area: item3; }
+#item4 { grid-area: item4; }
+#item5 { grid-area: item5; }
+#item6 { grid-area: item6; }
+#item7 { grid-area: item7; }
+#item8 { grid-area: item8; }
