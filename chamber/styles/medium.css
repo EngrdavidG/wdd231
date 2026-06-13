@@ -2,45 +2,30 @@
     .discover-grid-context {
         display: grid;
         grid-template-columns: 250px 1fr;
-        grid-template-areas: "demographics gallery";
         gap: 1.5rem;
     }
 
-    /* 2-Column Responsive Layout Matrix */
+    /* Reshuffle spatial positioning via explicit structural matrix blocks */
     .gallery-wrapper {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
             "item1 item2"
             "item3 item4"
             "item5 item6"
             "item7 item8";
-        gap: 1.5rem;
     }
     
-    /* Interactive Hover Effects for Medium Screens */
+    /* Apply interactive hover filter effects exclusively above mobile views */
     .discover-card figure {
         overflow: hidden;
-        background: #000000;
-        border-radius: 6px;
+        background: #000;
+        border-radius: 4px;
     }
-    
     .discover-card img {
         transition: transform 0.4s ease, filter 0.4s ease;
     }
-    
     .discover-card:hover img {
-        transform: scale(1.05);
-        filter: brightness(0.9);
+        transform: scale(1.06);
+        filter: brightness(0.85) contrast(1.1);
     }
 }
-
-/* Validator Safety Hooks for Medium Viewports */
-#item1 { grid-area: item1; }
-#item2 { grid-area: item2; }
-#item3 { grid-area: item3; }
-#item4 { grid-area: item4; }
-#item5 { grid-area: item5; }
-#item6 { grid-area: item6; }
-#item7 { grid-area: item7; }
-#item8 { grid-area: item8; }
