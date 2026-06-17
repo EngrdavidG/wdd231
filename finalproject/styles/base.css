@@ -93,38 +93,31 @@ nav ul li a.active, nav ul li a:hover {
     margin-top: 15px; 
 }
 
-.btn { 
-    display: 
-    inline-block; 
+/* Replace the old .btn, .btn-primary, .btn-secondary styles with this: */
+.ep-btn { 
+    display: inline-block; 
     padding: 10px 20px; 
     border-radius: 4px; 
     text-decoration: none; 
     font-weight: bold; 
     border: none; 
     cursor: pointer; 
+    text-align: center;
 }
+.ep-btn-main { background: var(--primary); color: white; }
+.ep-btn-sub { background: var(--secondary); color: white; }
 
-.btn-primary { 
-    background: var(--primary); 
-    color: white; 
+/* Accessible hidden style rule to balance your layout nicely */
+.visual-hidden-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
-
-.btn-secondary { 
-    background: var(--secondary); 
-    color: white; 
-}
-
-.btn-submit { background: var(--secondary); 
-    color: white; 
-    width: 100%; 
-    margin-top: 10px; 
-}
-
-.btn-close { background: #cf6679; 
-    color: white; 
-    margin-top: 15px; 
-}
-
 
 /* Dynamic Layout Cards */
 .student-grid-layout { 
