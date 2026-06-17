@@ -2,19 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Academic Data Resource Attributions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPulse - Academic Data Resource Attributions</title>
+    <meta name="description" content="Resource citations, framework exemptions, and structural layout attributions for the EduPulse School Portal project.">
+    <meta name="author" content="Engr. Izuogu David Onochie">
+    
+    <meta property="og:title" content="EduPulse - Resource Attributions">
+    <meta property="og:description" content="Resource citations and structural layout attributions for the EduPulse School Portal project.">
+    <meta property="og:image" content="https://byui.edu/images/logo.png"> <meta property="og:url" content="http://127.0.0.1:5500/attributions.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/main.js" type="module" defer></script>
 </head>
 <body>
-    <h1>Project Resource Attributions & Citations</h1>
-    <p>The operational layout properties for EduPulse were constructed completely by the student. The following sources were used for inspiration:</p>
-    <ul>
-        <li>Inspirational Text: Uchtdorf, Dieter F. "Happiness, Your Heritage" quote provided via course rubric.</li>
-        <li>Mock Student Profiles: Formulated manually to replicate nursery, primary, and secondary student tracking models.</li>
-        <li>Architecture Inspiration: Native accessible standard dialog structural specifications referenced via MDN Web Docs.</li>
-    </ul>
-    <p><a href="index.html">Return to Welcome Hub</a></p>
-</body>
-<footer>
+    <header>
+        <div class="logo-area">
+            <span class="logo-icon">🎓</span>
+            <h1>EduPulse</h1>
+        </div>
+        <button id="menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Welcome Hub</a></li>
+                <li><a href="portal.html">Parent Portal</a></li>
+                <li><a href="toolkit.html">Teacher's Toolkit</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section style="padding: 20px; max-width: 800px; margin: 0 auto;">
+            <h1>Project Resource Attributions</h1>
+            <p>The operational layout properties for EduPulse were constructed completely from scratch by the student. The following sources were used for inspiration and baseline guidelines:</p>
+            <ul>
+                <li><strong>Inspirational Text:</strong> Uchtdorf, Dieter F. "Happiness, Your Heritage" text block provided via course task parameters.</li>
+                <li><strong>Mock Student Data Matrix:</strong> Formulated manually in local JSON files to cleanly replicate nursery, primary, and secondary student tracking models.</li>
+                <li><strong>Architecture Inspiration:</strong> Native accessible standard dialog structural specifications referenced directly via MDN Web Docs.</li>
+            </ul>
+            <p style="margin-top: 20px;"><a href="index.html" class="btn btn-primary">&larr; Return to Welcome Hub</a></p>
+        </section>
+    </main>
+
+    <footer>
         <p>&copy; <span id="current-year"></span> | EduPulse Portal | Designed by Izuogu David Onochie</p>
+        <p><a href="attributions.html" class="active">Resource Attributions</a> | <a href="#" id="video-link" target="_blank">Project Video Walkthrough</a></p>
     </footer>
+</body>
 </html>
