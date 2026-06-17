@@ -1,0 +1,49 @@
+@media screen and (min-width: 768px) {
+    #menu-toggle { 
+        display: none; 
+    }
+    header { 
+        padding: 15px 40px; 
+    }
+    nav { 
+        display: block; 
+        position: static; 
+        width: auto; 
+        background: none; 
+    }
+
+    nav ul { 
+        flex-direction: row; 
+        gap: 20px; 
+    }
+    nav ul li a { 
+        border: none; 
+        padding: 8px 16px; 
+        border-radius: 4px; }
+    
+    .dashboard-grid { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 30px; }
+    .student-grid-layout { 
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    
+    .filter-controls { 
+        display: flex; 
+        gap: 15px; margin: 15px 0; 
+    }
+
+    .filter-btn { 
+        padding: 8px 16px; 
+        border: 1px solid var(--primary); 
+        background: white; 
+        cursor: pointer; 
+        border-radius: 4px; 
+    }
+
+    .filter-btn.active { 
+        background: var(--primary); 
+        color: white; 
+    }
+}

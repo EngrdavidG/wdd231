@@ -1,0 +1,196 @@
+:root {
+    --primary: #1e3a8a;
+    --secondary: #0d9488;
+    --dark: #1f2937;
+    --light: #f9fafb;
+    --accent: #e0f2fe;
+    --text: #374151;
+}
+
+* { box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body { background-color: 
+    var(--light); 
+    color: var(--text); 
+    line-height: 1.6; }
+
+header { 
+    background-color: var(--primary); 
+    color: white;
+    padding: 15px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative; }
+.logo-area { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+#menu-toggle { 
+    background: none; 
+    border: none; color: white; 
+    font-size: 24px; 
+    cursor: pointer; display: block; 
+}
+
+nav { display: none; 
+    width: 100%; position: absolute; 
+    top: 100%; left: 0; 
+    background-color: var(--primary); 
+    z-index: 10; 
+}
+nav.open { display: block; 
+}
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    flex-direction: column; 
+}
+nav ul li a { 
+    display: block; 
+    padding: 15px 20px; 
+    color: white; 
+    text-decoration: none; 
+    border-bottom: 1px solid #2563eb; 
+}
+
+nav ul li a.active, nav ul li a:hover { 
+    background-color: var(--secondary); 
+}
+
+.hero-banner { background: 
+    linear-gradient(135deg, var(--primary), var(--secondary)); 
+    color: white; padding: 40px 20px; 
+    text-align: center; 
+}
+
+.hero-banner p { max-width: 700px; 
+    margin: 15px auto 0; 
+    font-style: italic; 
+    font-size: 0.95rem; 
+}
+
+.dashboard-grid, .toolkit-container, .portal-header { 
+    padding: 20px; 
+    max-width: 1200px; 
+    margin: auto; 
+}
+.card { 
+    background: white; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+
+.action-buttons { display: flex; 
+    gap: 10px; 
+    margin-top: 15px; 
+}
+
+.btn { 
+    display: 
+    inline-block; 
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border: none; 
+    cursor: pointer; 
+}
+
+.btn-primary { 
+    background: var(--primary); 
+    color: white; 
+}
+
+.btn-secondary { 
+    background: var(--secondary); 
+    color: white; 
+}
+
+.btn-submit { background: var(--secondary); 
+    color: white; 
+    width: 100%; 
+    margin-top: 10px; 
+}
+
+.btn-close { background: #cf6679; 
+    color: white; 
+    margin-top: 15px; 
+}
+
+
+/* Dynamic Layout Cards */
+.student-grid-layout { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    padding: 20px; 
+    max-width: 1200px; 
+    margin: auto; 
+}
+
+.student-card { 
+    background: white; 
+    border: 1px solid #e5e7eb; 
+    border-radius: 6px; 
+    padding: 15px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+
+/* Forms styling */
+form { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+
+label { 
+    display: block; 
+    margin-top: 15px; 
+    font-weight: 600; 
+}
+
+input, select, textarea { 
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 5px; 
+    border: 1px solid #d1d5db; 
+    border-radius: 4px; 
+}
+
+/* Dialog Modal Configuration */
+dialog { 
+    border: none; 
+    border-radius: 8px; 
+    padding: 20px; 
+    max-width: 500px; 
+    width: 90%; 
+    margin: auto; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+}
+
+dialog::backdrop { 
+    background: rgba(0,0,0,0.5); 
+}
+
+footer { 
+    background: var(--dark); 
+    color: #9ca3af; 
+    text-align: center; 
+    padding: 20px; 
+    font-size: 14px; 
+    margin-top: 40px; 
+}
+
+footer a { 
+    color: #f3f4f6; 
+    text-decoration: none; 
+    margin: 0 10px; 
+}

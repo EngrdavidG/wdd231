@@ -1,0 +1,20 @@
+[
+  {
+    "id": "STU001",
+    "name": "Chinedu Okafor",
+    "level": "Nursery",
+    "class": "Pre-K 2",
+    "dailyReport": { "meals": "Ate all lunch", "nap": "1.5 hours", "mood": "Cheerful" },
+    "attendance": "Present",
+    "status": "Active"
+  },
+  {
+    "id": "STU012",
+    "name": "Amara Yusuf",
+    "level": "Secondary",
+    "class": "SS2",
+    "grades": { "Mathematics": "A", "English": "B+", "Physics": "A-" },
+    "attendance": "Present",
+    "status": "Active"
+  }
+]

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPulse - Submission Confirmed</title>
+    <meta name="icon" content="favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <style>
+        .summary-box { background: #f4f9f4; border-left: 5px solid #2e7d32; padding: 20px; border-radius: 4px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <main style="max-width:600px; margin:50px auto; padding:20px;">
+        <h2>Assessment Broadcast Logged Successfully!</h2>
+        <p>The operational metrics submitted have been recorded cleanly. Here is the processed routing data summary:</p>
+        
+        <div class="summary-box" id="form-output">
+            </div>
+        
+        <p style="margin-top:30px;"><a href="toolkit.html" class="btn btn-primary">&larr; Return to Toolkit</a></p>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const output = document.getElementById('form-output');
+        output.innerHTML = `
+            <p><strong>Educator:</strong> ${params.get('teacherName') || 'N/A'}</p>
+            <p><strong>Student:</strong> ${params.get('targetStudent') || 'N/A'}</p>
+            <p><strong>Narrative:</strong> ${params.get('behaviorLog') || 'N/A'}</p>
+        `;
+    </script>
+</body>
+<footer>
+        <p>&copy; <span id="current-year"></span> | EduPulse Portal | Designed by Izuogu David Onochie</p>
+        <p><a href="attributions.html">Resource Attributions</a> | <a href="#" id="video-link" target="_blank">Project Video Walkthrough</a></p>
+    </footer>
+</html>
