@@ -1,0 +1,31 @@
+@media only screen and (min-width: 1025px) {
+    .discover-grid-context {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 2rem;
+    }
+
+    /* Complete rearrangement across 3 columns */
+    .gallery-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "item1 item2 item3"
+            "item4 item5 item6"
+            "item7 item8 ."; /* Employs empty trailing slot formatting rule safely */
+    }
+
+    /* Complex overlay shadow and depth blend effect configuration */
+    .discover-card {
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .discover-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(11, 93, 51, 0.15);
+    }
+    .discover-card figure img {
+        transition: filter 0.3s ease-in-out;
+    }
+    .discover-card:hover figure img {
+        filter: grayscale(0) saturate(1.3);
+    }
+}
