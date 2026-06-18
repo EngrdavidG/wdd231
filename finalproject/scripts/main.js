@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 3. Global Video Anchor Router
-    const videoURL = "https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE"; 
+    const videoURL = "https://www.loom.com/share/e31b608ee5dd4329a4da0c84bb0d7c71"; 
     ["video-link", "video-link-portal", "video-link-toolkit"].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.href = videoURL;
